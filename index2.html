@@ -1,0 +1,233 @@
+<html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-H+L/S9Lr5ZEGgkrbbx9vpijizyng+R6w7PS/69i2l2lf6jmrU5vTDdkFmNthvf0w15LvVNEg0z4tr2b+3p+vFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1920x1080/?nature') center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #signupText {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #getStartedText {
+            text-align: center;
+        }
+    </style>
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+<div class="card">
+    <div class="options" id="options">
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="showForm('linkedin')">
+                <span id="signupText">Sign Up</span> with LinkedIn
+                <i class="fab fa-linkedin fa-lg ml-2"></i>
+            </button>
+        </div>
+        <div class="text-center mb-4">
+            <button class="btn btn-info" onclick="showForm('twitter')">
+                <span id="signupText">Sign Up</span> with Twitter
+                <i class="fab fa-twitter fa-lg ml-2"></i>
+            </button>
+        </div>
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="showForm('facebook')">
+                <span id="signupText">Sign Up</span> with Facebook
+                <i class="fab fa-facebook fa-lg ml-2"></i>
+            </button>
+        </div>
+    </div>
+    <div id="emailPasswordForm" style="display: none;">
+        <h1 class="text-center mb-4"><span id="signupText">Sign Up</span> </h1>
+        <p id="getStartedText">Get started absolutely free</p>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="agreeCheckbox" required>
+                <label class="form-check-label" for="agreeCheckbox">I agree to the Terms and Policies</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    function showForm(provider) {
+        document.getElementById('options').style.display = 'none';
+        document.getElementById('emailPasswordForm').style.display = 'block';
+
+        // Example of printing output using DOM
+        var outputContainer = document.createElement('div');
+        outputContainer.innerHTML = 'You chose to sign up with ' + provider;
+        document.getElementById('emailPasswordForm').appendChild(outputContainer);
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-H+L/S9Lr5ZEGgkrbbx9vpijizyng+R6w7PS/69i2l2lf6jmrU5vTDdkFmNthvf0w15LvVNEg0z4tr2b+3p+vFQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1920x1080/?nature') center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #signupText {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #getStartedText {
+            text-align: center;
+        }
+    </style>
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+<div class="card">
+    <div class="options" id="options">
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="showForm('linkedin')">
+                <span id="signupText">Sign Up</span> with LinkedIn
+                <i class="fab fa-linkedin fa-lg ml-2"></i>
+            </button>
+        </div>
+        <div class="text-center mb-4">
+            <button class="btn btn-info" onclick="showForm('twitter')">
+                <span id="signupText">Sign Up</span> with Twitter
+                <i class="fab fa-twitter fa-lg ml-2"></i>
+            </button>
+        </div>
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="showForm('facebook')">
+                <span id="signupText">Sign Up</span> with Facebook
+                <i class="fab fa-facebook fa-lg ml-2"></i>
+            </button>
+        </div>
+    </div>
+    <div id="emailPasswordForm" style="display: none;">
+        <h1 class="text-center mb-4"><span id="signupText">Sign Up</span> </h1>
+        <p id="getStartedText">Get started absolutely free</p>
+        <div id="selectedProvider"></div>
+        <form id="signupForm" onsubmit="printValues(event)">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="agreeCheckbox" required>
+                <label class="form-check-label" for="agreeCheckbox">I agree to the Terms and Policies</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    function showForm(provider) {
+        document.getElementById('options').style.display = 'none';
+        document.getElementById('emailPasswordForm').style.display = 'block';
+
+        // Example of printing output using DOM
+        var selectedProvider = document.getElementById('selectedProvider');
+        selectedProvider.innerHTML = 'You chose to sign up with ' + provider;
+    }
+
+    function printValues(event) {
+        event.preventDefault();
+        var emailValue = document.getElementById('email').value;
+        var passwordValue = document.getElementById('password').value;
+
+        alert('Email: ' + emailValue + '\nPassword: ' + passwordValue);
+    }
+</script>
+</body>
+</html>
